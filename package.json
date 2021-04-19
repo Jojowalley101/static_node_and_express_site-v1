@@ -1,0 +1,19 @@
+{
+  "name": "static_node_and_express_site-v1",
+  "version": "1.0.0",
+  "description": "store all the data about the projects I've created",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jojowalley101/staticNode_express_sitehttps://github.com/Jojowalley101/staticNode_express_site"
+  },
+  "author": "Joelle Walley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
+}
