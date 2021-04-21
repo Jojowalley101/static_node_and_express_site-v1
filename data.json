@@ -4,9 +4,9 @@
         "project_name": "techdegreeJavaScript-unit1-project",
         "description": "In this project I created an app that displays random famous quotes each time a button is clicked, and selected my own quotes from famous historical figures, artists, scientists, celebrities, etc.",
         "technologies": ["HTML", "CSS", "Javascript"],
-        "live_link": "",
-        "github_link": "",
-        "image_urls":[""]
+        "live_link": "https://jojowalley101.github.io/techdegreeJavaScript-unit1-project/",
+        "github_link": "https://github.com/Jojowalley101/techdegreeJavaScript-unit1-project",
+        "image_urls":["../images/randomquote1", "../images/randomquote2"]
         
 
 }, {

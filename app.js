@@ -7,8 +7,8 @@
  */
 
 const express = require('express');
-const routesMain = require('./routes');
-const projectsHere = require('./routes/projects');
+const routesMain = require('data.json');
+//const projectsHere = require('./da');
 
 const app = express();
 
@@ -46,11 +46,18 @@ app.use('/static', express.static('public'));
  * to show off each project. Which means adding data, or "locals", 
  * as an object that contains data to be passed to the Pug template.
 */  
+const router = express.Router();
+router.get('/', function(req, res, next) {
+    res.render('data.projects');
+});
+//router.get('')
+
 
 app.use(routesMain);
-app.use('/projects', projectsHere);
-app.use(pageNotFound);
-app.use(serverError);
+
+//app.use('/projects', projectsHere);
+//app.use(pageNotFound);
+//app.use(serverError);
 
 
 /**
