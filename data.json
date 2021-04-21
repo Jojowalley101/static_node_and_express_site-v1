@@ -1,0 +1,66 @@
+{
+    "projects": [{
+        "id": "0",
+        "project_name": "techdegreeJavaScript-unit1-project",
+        "description": "In this project I created an app that displays random famous quotes each time a button is clicked, and selected my own quotes from famous historical figures, artists, scientists, celebrities, etc.",
+        "technologies": ["HTML", "CSS", "Javascript"],
+        "live_link": "",
+        "github_link": "",
+        "image_urls":[""]
+        
+
+}, {
+    "id": "1",
+    "project_name": "",
+    "description": "",
+    "technologies": [
+        ""
+    ],
+    "live_link": "",
+    "github_link": "",
+    "image_urls": [
+        ""
+    ]
+
+}, {
+    "id": "2",
+    "project_name": "",
+    "description": "",
+    "technologies": [
+        ""
+    ],
+    "live_link": "",
+    "github_link": "",
+    "image_urls": [
+        ""
+    ]
+
+}, {
+    "id": "3",
+    "project_name": "",
+    "description": "",
+    "technologies": [
+        ""
+    ],
+    "live_link": "",
+    "github_link": "",
+    "image_urls": [
+        ""
+    ]
+
+}, {
+
+    "id": "4",
+    "project_name": "",
+    "description": "",
+    "technologies": [
+        ""
+    ],
+    "live_link": "",
+    "github_link": "",
+    "image_urls": [
+        ""
+    ]
+
+}]}
+
