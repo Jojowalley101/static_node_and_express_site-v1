@@ -4,22 +4,25 @@
  * Your data.json file
  * Optionally - the path module which can be used 
  * when setting the absolute path in the express.static function.
+ * @source adapted from Node and Express project practice files
  */
 
 const express = require('express');
-const routesMain = require('data.json');
-//const projectsHere = require('./da');
-
+const path = require('path');
+const { projects } = require('./data.json');
 const app = express();
 
+// view engine setup
+app.set('view engine', 'pug');
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => {
+  res.render('index', {projects})
+});
 
-
-
-
-
-
-
+app.get('/about', (req, res) => {
+  res.render('about');
+});
 
 
 
@@ -30,12 +33,11 @@ const app = express();
   * to serve the static files located in the public folder
   */
 
-app.set('view engine', 'pug');
-app.use('/static', express.static('public'));
+//app.set('view engine', 'pug');
 
 
 
-
+// module.exports = app;
 
 /**
  *  Set your routes. You'll need:
@@ -46,18 +48,44 @@ app.use('/static', express.static('public'));
  * to show off each project. Which means adding data, or "locals", 
  * as an object that contains data to be passed to the Pug template.
 */  
-const router = express.Router();
-router.get('/', function(req, res, next) {
-    res.render('data.projects');
+
+app.get('/projects/:id', function(req, res, next) {
+  const projectsId = req.params.id;
+  const projs = projects.find(({id}) => id === +projectsId);
+  if (projs) {
+    res.render('projs', {projs});
+  } else {
+    const errorNotFound = new Error('Error, project not found');
+    errorNotFound.status = 404;
+    console.log(errorNotFound.status, errorNotFound.message);
+    next(errorNotFound);
+  }
 });
-//router.get('')
 
+app.use((req, res, next) => {
+  const errorNotFind = new Error('Page not found');
+  errorNotFind.status = 404;
+  console.log(errorNotFind.status, errorNotFind.message);
+  next(errorNotFind);
+});
 
-app.use(routesMain);
+app.get('/error', (req, res, next) => {
+  const errorServer = new Error('Server error');
+  errorServer.status = 500;
+  console.log(errorServer.status, errorServer.message);
+  next(errorServer);
+});
 
-//app.use('/projects', projectsHere);
-//app.use(pageNotFound);
-//app.use(serverError);
+app.use((errors, req, res, next) => {
+  res.locals.error = errors;
+  res.status(errors.status || 404);
+
+  if (errors.status === 500) {
+    res.render('page-not-found');
+  } else {
+    res.render('error');
+  }
+});
 
 
 /**
@@ -66,3 +94,5 @@ app.use(routesMain);
  */
 
 app.listen(3000, () => console.log('app is listening to....'));
+
+//module.exports = router;

@@ -1,0 +1,10 @@
+extends layout.pug 
+block content 
+    article.error 
+        h1 #{error.message}
+        h3 #{error.status}
+    nav.nav 
+        a(href='/')
+            span &larr;
+            |   Back
+              

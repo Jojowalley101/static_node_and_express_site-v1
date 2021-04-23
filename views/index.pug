@@ -5,24 +5,24 @@ block content
   article.portfolio-intro
 
     //- Replace with your own heading like 'My Portfolio', or 'Hey, Potential Employers', or 'Let's make the web great together!' 
-    h1 Heading
+    h1 Welcome to Walley's World 
 
     //- Replace with a description for your portfolio, what this project is, it's purpose, what it's supposed to accomplish, etc. 
-    p Portfolio description
+    p With learning comes the tasks of vulnerability and guidance, here is some of our work. 
 
 
   article.portfolio-project-thumbs
     .projects-box.box.grid
 
       //- Use the Pug `each` iterator to loop over the projects in your data file  
-      
+      each p in projects
         //- Use the example Pug code below and interpolated template literals as needed to dynamically generate:
           //- The paths in the link's href and img's src attributes
           //- The text 'Thumbnail' interpolated with the project title for the img's alt attribute
           //- The project title for the h5 element's text
 
         .cell
-          a(href='#')
-            img.thumbnail(src='https://placehold.it/550x550', alt='')
-            h5 My Site
+          a(href=`/projects/${p.id}`)
+            img.thumbnail(src=`/images/${p.thumbnail_url}`, alt=`${p.project_name} Thumbnail Image`);
+            h5 #{p.project_name}
 
