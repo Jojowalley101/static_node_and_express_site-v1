@@ -9,7 +9,7 @@
 
 const express = require('express');
 const path = require('path');
-const { projects } = require('./data.json');
+const { projects } = require('data.json');
 const app = express();
 
 // view engine setup
@@ -17,7 +17,7 @@ app.set('view engine', 'pug');
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.render('index', {projects})
+  res.render('index');
 });
 
 app.get('/about', (req, res) => {
@@ -51,6 +51,7 @@ app.get('/about', (req, res) => {
 
 app.get('/projects/:id', function(req, res, next) {
   const projectsId = req.params.id;
+  console.log(projectsId);
   const projs = projects.find(({id}) => id === +projectsId);
   if (projs) {
     res.render('projs', {projs});

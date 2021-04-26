@@ -23,6 +23,6 @@ block content
 
         .cell
           a(href=`/projects/${p.id}`)
-            img.thumbnail(src=`/images/${p.thumbnail_url}`, alt=`${p.project_name} Thumbnail Image`);
+            img.thumbnail(src=`/static/images/${p.image_urls[0]}`, alt=`${p.project_name} Thumbnail Image`)
             h5 #{p.project_name}
 

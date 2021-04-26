@@ -1,16 +1,17 @@
 {
     "projects": [{
-        "id": "0",
+        "id": 0,
         "project_name": "techdegreeJavaScript-unit1-project",
         "description": "In this project I created an app that displays random famous quotes each time a button is clicked, and selected my own quotes from famous historical figures, artists, scientists, celebrities, etc.",
         "technologies": ["HTML", "CSS", "Javascript"],
         "live_link": "https://jojowalley101.github.io/techdegreeJavaScript-unit1-project/",
         "github_link": "https://github.com/Jojowalley101/techdegreeJavaScript-unit1-project",
-        "image_urls":["../images/randomquote1", "../images/randomquote2"]
+        "image_urls":[
+            "randomquote1.png", "randomquote2.png"]
         
 
 }, {
-    "id": "1",
+    "id": 1,
     "project_name": "Data-Pagination-and-Filtering",
     "description": "In this project, you'll use a common web development technique known as “pagination” to enhance the usability of a web page. You'll start with a file that contains information for 42 students, including name, email, and picture. You'll start by using your JavaScript skills to display the first nine students on the page. Then you will add navigation, also known as pagination buttons, that the user can click to display different pages of students. Your application will need to work with a list of any number of students, not just with the supplied array of 42 students. This means your solutions need to be flexible enough to handle arrays of student data of various lengths. For this project, you will want to write your code using plain JavaScript, sometimes known as “vanilla” JavaScript. Avoid using jQuery or any other libraries, plugins, or code snippets for any aspect of this project, including the pagination.",
     "technologies": ["HTML",
@@ -21,11 +22,11 @@
     "live_link": "",
     "github_link": "https://github.com/Jojowalley101/Data-Pagination-and-Filtering",
     "image_urls": [
-        "../images/dataPagination1.png", "../images/dataPagination2"
+        "/static/images/dataPagination1.png", "/static/images/dataPagination2.png"
     ]
 
 }, {
-    "id": "2",
+    "id": 2,
     "project_name": "Enteractive-Form-March2021",
     "description": "In this project, you'll use JavaScript to enhance an interactive registration form for a fictional Full Stack conference. Using the supplied HTML and CSS files, you'll add your own JavaScript to make the form more user-friendly by: Adding customized and conditional behavior and interactivity Validating user input and providing helpful error messages when the user enters invalid information into the form fields.",
     "technologies": [
@@ -36,11 +37,11 @@
     "live_link": "",
     "github_link": "https://github.com/Jojowalley101/Enteractive-Form-March2021",
     "image_urls": [
-        "../images/form-interacting1.png", "../images/form-interacting2.png"
+        "/static/images/form-interacting1.png", "/static/images/form-interacting2.png"
     ]
 
 }, {
-    "id": "3",
+    "id": 3,
     "project_name": "oop_game-v2",
     "description": "In this project, you'll create a browser-based, word guessing game: Phrase Hunter You’ll use JavaScript and OOP (Object-Oriented Programming) to select a random, hidden phrase, which a player tries to guess, by clicking letters on an onscreen keyboard. Using JavaScript, you’ll create two JavaScript classes with specific properties and methods. You'll create a Game class for managing the game, and a Phrase class to help with creating an array of Phrase objects. Your code will choose a random phrase, split the phrase into letters, and put those letters onto the gameboard. Each time the player guesses a letter, the program compares the letter the player has chosen with the random phrase. If the letter is in the phrase, the gameboard displays the chosen letters on the screen. A player continues to select letters until they guess the phrase (and win), or make five incorrect guesses (and lose). If the player completes the phrase before they run out of guesses, a winning screen appears. If the player guesses incorrectly five times, a losing screen appears. A player can guess a letter only once. After they’ve guessed a letter, your programming will need to disable that letter on the onscreen keyboard.",
     "technologies": [
@@ -51,12 +52,12 @@
     "live_link": "",
     "github_link": "https://github.com/Jojowalley101/oop_game-v2",
     "image_urls": [
-        "../images/phraseHunter1.png", "../images/phraseHunter2.png"
+        "/static/images/phraseHunter1.png", "/static/images/phraseHunter2.png"
     ]
 
 }, {
 
-    "id": "4",
+    "id": 4,
     "project_name": "Public-API-Requests_proj5",
     "description": "For this project, you'll build an app for a fictional company called Awesome Startup, a distributed company with remote employees working all over the world. They need a smart way for employees to share contact information with each other. You’ll use the Random User Generator API (https://randomuser.me/) to grab information for 12 random “employees,” and use that data to build a prototype for an Awesome Startup employee directory. You’ll request a JSON object from the API and parse the data so that 12 employees are listed in a grid with their thumbnail image, full name, email, and location. Clicking the employee’s image or name will open a modal window with more detailed information, such as the employee’s birthday and address. You may use jQuery with this project, but other frameworks, libraries or plugins are not permitted. While there are plugins that can help with the creation of a gallery and modal setup, it is important for developers to be able to understand how tools like that work. So you'll need to write all your own JS or jQuery to create the necessary functionality for this project.",
     "technologies": [
@@ -67,7 +68,7 @@
     "live_link": "",
     "github_link": "https://github.com/Jojowalley101/Public-API-Requests_proj5",
     "image_urls": [
-        "../images/api-data-requests1.png", "../images/api-data-requests2.png"
+        "/static/images/api-data-requests1.png", "/static/images/api-data-requests2.png"
     ]
 
 }]}
