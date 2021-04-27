@@ -6,23 +6,27 @@
  * when setting the absolute path in the express.static function.
  * @source adapted from Node and Express project practice files
  */
-
+//delete require.cache['data.json']
 const express = require('express');
 const path = require('path');
-const { projects } = require('data.json');
+const { projects } = require('./data.json');
 const app = express();
 
 // view engine setup
+app.set('views');
 app.set('view engine', 'pug');
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  //res.locals.data.projects = data.projects;
+  //res.locals.data.projects = data.projects;
+  res.render('index', {projects});
 });
 
 app.get('/about', (req, res) => {
   res.render('about');
 });
+
 
 
 
@@ -37,7 +41,7 @@ app.get('/about', (req, res) => {
 
 
 
-// module.exports = app;
+//module.exports = app;
 
 /**
  *  Set your routes. You'll need:
@@ -52,9 +56,12 @@ app.get('/about', (req, res) => {
 app.get('/projects/:id', function(req, res, next) {
   const projectsId = req.params.id;
   console.log(projectsId);
-  const projs = projects.find(({id}) => id === +projectsId);
+  const projs = projects.find(element => element.id === projectsId);
+  console.log(projects[0].id);
+  console.log(projs);
+
   if (projs) {
-    res.render('projs', {projs});
+    res.render('project', {projs});
   } else {
     const errorNotFound = new Error('Error, project not found');
     errorNotFound.status = 404;
@@ -94,6 +101,6 @@ app.use((errors, req, res, next) => {
  * and log a string to the console that says which port the app is listening to.
  */
 
-app.listen(3000, () => console.log('app is listening to....'));
+app.listen(3000);
 
 //module.exports = router;
