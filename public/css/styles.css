@@ -28,7 +28,7 @@ body {
 }
 
 article {
-  background: #fefefe;
+  background: #ebafe8;
 }
 
 h1,h2,h3,h4,h5,p{
@@ -51,7 +51,7 @@ h6{
 
 p{
   font-size: 15px;
-  color: #666;
+  color: rgba(102, 102, 102, 0.938);
 }
 
 a {
@@ -137,7 +137,7 @@ nav a span {
   height: 100%;
   min-height: 100%;
   padding: 20px;
-  background: #000;
+  background: rgb(0, 0, 0);
 }
 
 .sidebar-info-box {
@@ -166,7 +166,7 @@ nav a span {
 .sidebar p {
   text-rendering: optimizeLegibility;
   line-height: 1.6;
-  font-size: 14px;
+  font-size: 18px;
   color: #999
 }
 
@@ -181,7 +181,7 @@ nav a span {
 
 .header {
   vertical-align: middle;
-  color: #fefefe;
+  color: #ed96f8;
   height: 40px;
   padding: 0.5rem;
   background: #0a0a0a;
